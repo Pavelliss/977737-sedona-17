@@ -5,29 +5,35 @@
     <title>HTML Academy: Седона</title>
   </head>
   <body>
+    <!--HEADER-->
     <header class="header">
-        <nav class="nav header__nav">
-            <ul class="nav__list">
-              <li><a class="nav_item">Главная</a></li>
-              <li><a class="nav_item" href="photo.html">Фото и видео</a></li>
-              <li><a class="nav_item" href="form.html">Форма отзыва</a></li>
-              <li><a class="nav_item" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a></li>
-            </ul>
-        </nav>
-        <a class="logo header__logo" href="index.html">
-          <img src="#" alt="Logo city of Sedona">
-        </a>
-        <button class="header__button header__button--open">
-          <span class="visually-hidden">Открыть меню сайта</span>
-        </button>
-        <button class="header__button header__button--open">
-          <span class="visually-hidden">Закрыть меню сайта</span>
-        </button>
-        <img class="header__image" src="#" alt="Welcom to Sedona">
+      <nav class="nav header__nav">
+        <ul class="nav__list">
+          <li><a class="nav__item nav__item--hover">Главная</a></li>
+          <li><a class="nav__item nav__item--hover" href="photo.html">Фото и видео</a></li>
+          <li><a class="nav__item nav__item--hover" href="form.html">Форма отзыва</a></li>
+          <li><a class="nav__item nav__item--hover" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a></li>
+        </ul>
+      </nav>
+      <a class="logo header__logo" href="index.html">
+        <img src="#" alt="Logo city of Sedona">
+      </a>
+      <button class="header__button header__button--open">
+        <span class="visually-hidden">Открыть меню сайта</span>
+      </button>
+      <button class="header__button header__button--open">
+        <span class="visually-hidden">Закрыть меню сайта</span>
+      </button>
+      <div class="header__image">
+        <img src="#" alt="Welcom to Sedona">
+      </div>
     </header>
+    <!--MAIN-->
     <main class="main">
-      <h1 class="main__titel">Седона — небольшой городок в Аризоне, заслуживающий большего!</h1>
-      <p>Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
+      <section class="promo">
+          <h1 class="promo__titel">Седона — небольшой городок в Аризоне, заслуживающий большего!</h1>
+          <p class="promo__slogan">Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
+      </section>
       <ul class="causes-list main__list">
         <li class="causes-list__item">
           <b class="causes-list__number">— №1 —</b>
@@ -72,18 +78,24 @@
         </li>
       </ul>
     </main>
+    <!--FOOTER-->
     <footer class="footer">
+      <a class="hashtag footer__hashtag">#visitsedona</a>
       <div class="social-networks">
-        <a class="social-networks__item social-networks__item--tw" href="#">
+        <a class="button social-networks__button social-networks__button--hover social-networks__button--tw" href="#">
           <span class="social-networks__span visually-hidden">Седона в Twitter</span>
         </a>
-        <a class="social-networks__item social-networks__item--fb" href="#">
+        <a class="button social-networks__button social-networks__button--hover social-networks__button--fb" href="#">
             <span class="social-networks__span visually-hidden">Седона в Facebook</span>
         </a>
-        <a class="social-networks__item social-networks__item--yt" href="https://www.youtube.com/watch?v=-pjw1_GucsA">
+        <a class="button social-networks__button social-networks__button--hover social-networks__button--yt" href="https://www.youtube.com/watch?v=-pjw1_GucsA">
             <span class="social-networks__span visually-hidden">Седона в YouYube</span>
-        </a>  
+        </a>
       </div>
+      <a class="develop footer__develop" href="https://htmlacademy.ru/intensive/adaptive">
+        Разработано
+        <img class="develop__image" src="#" alt="HTMLacademy">
+      </a>
     </footer>
   </body>
 </html>
