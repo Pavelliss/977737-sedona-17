@@ -9,37 +9,34 @@
     <header class="header">
       <nav class="nav header__nav">
         <ul class="nav__list">
-          <li><a class="nav__item nav__item--hover" href="index.html">Главная</a></li>
-          <li><a class="nav__item nav__item--hover" href="photo.html">Фото и видео</a></li>
-          <li><a class="nav__item nav__item--hover">Форма отзыва</a></li>
-          <li><a class="nav__item nav__item--hover" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a></li>
+          <li class="nav__item"><a class="nav__link" href="index.html">Главная</a></li>
+          <li class="nav__item"><a class="nav__link" href="photo.html">Фото и видео</a></li>
+          <li class="nav__item"><a class="nav__link">Форма отзыва</a></li>
+          <li class="nav__item"><a class="nav__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a></li>
         </ul>
+        <button class="nav__button nav__button--open nav__button--close">
+          <span class="visually-hidden">Открыть меню сайта</span>
+        </button>
       </nav>
       <a class="logo header__logo" href="index.html">
         <img src="#" alt="Logo city of Sedona">
       </a>
-      <button class="header__button header__button--open">
-        <span class="visually-hidden">Открыть меню сайта</span>
-      </button>
-      <button class="header__button header__button--open">
-        <span class="visually-hidden">Закрыть меню сайта</span>
-      </button>
-      <div class="header__image head__image--min">
+      <div class="header__image header__image--min">
         <img src="#" alt="Sedona">
       </div>
     </header>
     <!--FOOTER-->
     <footer class="footer">
       <a class="hashtag footer__hashtag">#visitsedona</a>
-      <div class="social-networks">
-        <a class="button social-networks__button social-networks__button--hover social-networks__button--tw" href="#">
-          <span class="social-networks__span visually-hidden">Седона в Twitter</span>
+      <div class="social">
+        <a class="button social__button social__button--tw" href="#">
+          <span class="visually-hidden">Седона в Twitter</span>
         </a>
-        <a class="button social-networks__button social-networks__button--hover social-networks__button--fb" href="#">
-            <span class="social-networks__span visually-hidden">Седона в Facebook</span>
+        <a class="button social__button social__button--fb" href="#">
+            <span class="visually-hidden">Седона в Facebook</span>
         </a>
-        <a class="button social-networks__button social-networks__button--hover social-networks__button--yt" href="https://www.youtube.com/watch?v=-pjw1_GucsA">
-            <span class="social-networks__span visually-hidden">Седона в YouYube</span>
+        <a class="button social__button social__button--yt" href="https://www.youtube.com/watch?v=-pjw1_GucsA">
+            <span class="visually-hidden">Седона в YouYube</span>
         </a>
       </div>
       <a class="develop footer__develop" href="https://htmlacademy.ru/intensive/adaptive">

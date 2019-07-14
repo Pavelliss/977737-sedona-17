@@ -9,21 +9,18 @@
     <header class="header">
       <nav class="nav header__nav">
         <ul class="nav__list">
-          <li><a class="nav__item nav__item--hover">Главная</a></li>
-          <li><a class="nav__item nav__item--hover" href="photo.html">Фото и видео</a></li>
-          <li><a class="nav__item nav__item--hover" href="form.html">Форма отзыва</a></li>
-          <li><a class="nav__item nav__item--hover" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a></li>
+          <li class="nav__item"><a class="nav__link">Главная</a></li>
+          <li class="nav__item"><a class="nav__link" href="photo.html">Фото и видео</a></li>
+          <li class="nav__item"><a class="nav__link" href="form.html">Форма отзыва</a></li>
+          <li class="nav__item"><a class="nav__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a></li>
         </ul>
+        <button class="nav__button nav__button--open nav__button--close">
+          <span class="visually-hidden">Открыть меню сайта</span>
+        </button>
       </nav>
       <a class="logo header__logo" href="index.html">
         <img src="#" alt="Logo city of Sedona">
       </a>
-      <button class="header__button header__button--open">
-        <span class="visually-hidden">Открыть меню сайта</span>
-      </button>
-      <button class="header__button header__button--open">
-        <span class="visually-hidden">Закрыть меню сайта</span>
-      </button>
       <div class="header__image">
         <img src="#" alt="Welcom to Sedona">
       </div>
@@ -35,7 +32,7 @@
           <p class="promo__slogan">Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
       </section>
       <ul class="causes-list main__list">
-        <li class="causes-list__item">
+        <ol class="causes-list__item">
           <b class="causes-list__number">— №1 —</b>
           <h2 class="causes-list__title">Настоящий городок</h2>
           <p class="causes-list__text">Седона не аттракцион для туристов, там течет своя жизнь</p>
@@ -54,42 +51,42 @@
                 <p class="offers-list__text">Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
             </li>
           </ul>
-        </li>
-        <li class="causes-list__item">
+        </ol>
+        <ol class="causes-list__item">
             <b class="causes-list__number">— №2 —</b>
             <h2 class="causes-list__title">Там есть мост дьявола</h2>
             <p class="causes-list__text">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
             <img src="#" alt="Фото моста">
-        </li>
-        <li class="causes-list__item causes-list__item--change-color">
+        </ol>
+        <ol class="causes-list__item causes-list__item--white-color">
             <b class="causes-list__number">— №3 —</b>
             <h2 class="causes-list__title">Не большая площадь</h2>
             <p class="causes-list__text">Все интересные места находятся очень близко</p>
-        </li>
-        <li class="causes-list__item causes-list__item--change-color">
+        </ol>
+        <ol class="causes-list__item causes-list__item--white-color">
             <b class="causes-list__number">— №4 —</b>
             <h2 class="causes-list__title">Красивая дорога</h2>
             <p class="causes-list__text">Ехать в седону из Лас-Вегаса совсем не скучно</p>
-        </li>
-        <li class="causes-list__item causes-list__item--change-color">
+        </ol>
+        <ol class="causes-list__item causes-list__item--white-color">
             <b class="causes-list__number">— №5 —</b>
             <h2 class="causes-list__title">Мало туристов</h2>
             <p class="causes-list__text">Большинство едет в гранд каньон и толпится там</p>
-        </li>
+        </ol>
       </ul>
     </main>
     <!--FOOTER-->
     <footer class="footer">
       <a class="hashtag footer__hashtag">#visitsedona</a>
-      <div class="social-networks">
-        <a class="button social-networks__button social-networks__button--hover social-networks__button--tw" href="#">
-          <span class="social-networks__span visually-hidden">Седона в Twitter</span>
+      <div class="social">
+        <a class="button social__button social__button--tw" href="#">
+          <span class="visually-hidden">Седона в Twitter</span>
         </a>
-        <a class="button social-networks__button social-networks__button--hover social-networks__button--fb" href="#">
-            <span class="social-networks__span visually-hidden">Седона в Facebook</span>
+        <a class="button social__button social__button--fb" href="#">
+            <span class="visually-hidden">Седона в Facebook</span>
         </a>
-        <a class="button social-networks__button social-networks__button--hover social-networks__button--yt" href="https://www.youtube.com/watch?v=-pjw1_GucsA">
-            <span class="social-networks__span visually-hidden">Седона в YouYube</span>
+        <a class="button social__button social__button--yt" href="https://www.youtube.com/watch?v=-pjw1_GucsA">
+            <span class="visually-hidden">Седона в YouYube</span>
         </a>
       </div>
       <a class="develop footer__develop" href="https://htmlacademy.ru/intensive/adaptive">
