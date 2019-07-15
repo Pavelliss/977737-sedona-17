@@ -25,6 +25,83 @@
         <img src="#" alt="Sedona">
       </div>
     </header>
+    <main class="main main--form">
+      <section class="promo">
+          <h1 class="promo__titel">Оставьте свой отзыв</h1>
+          <p class="promo__slogan">Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
+      </section>
+      <form class="form" action="https://echo.htmlacademy.ru" method="post">
+        <fieldset class="form__fieldset">
+          <legend class="form__legend">Представьтесь</legend>
+						<label class="form__label">
+							Имя*:<input class="form__input" type="text" name="first-name" placeholder="Петр">
+						</label>
+						<label class="form__label">
+							Фамилия*:<input class="form__input" type="text" name="last-name" placeholder="Иванов">
+						</label>
+						<label class="form__label">
+							Отчество:<input class="form__input" type="text" name="middle-name" placeholder="Александрович">
+						</label>
+        </fieldset>
+				<fieldset class="form__fieldset">
+          <legend class="form__legend">Контактная информация</legend>
+						<label class="form__label">
+							Контактный телефон*:<input class="form__input" type="tel" name="user-tel" placeholder="Введите телефон">
+						</label>
+						<label class="form__label">
+							Электронная почта*:<input class="form__input" type="email" name="user-email" placeholder="Введите e-mail">
+						</label>
+        </fieldset>
+				<fieldset class="form__fieldset">
+					<legend class="form__legend">Ваше общее впечатление</legend>
+					<label class="form__label">
+						<input class="form__input" type="radio" name="impressions" value="good" checked>
+						<span class="form__radio-element"></span>
+						<span class="form__span">Скорее положительное</span>
+					</label>
+					<label class="form__label">
+						<input class="form__input" type="radio" name="impressions" value="bad">
+						<span class="form__radio-element"></span>
+						<span class="form__span">Скорее отрицательное</span>
+					</label>
+					<label class="form__label">
+						<input class="form__input" type="radio" name="impressions" value="nothing">
+						<span class="form__radio-element"></span>
+						<span class="form__span">Затрудняюсь ответить</span>
+					</label>
+				</fieldset>
+				<fieldset class="form__fieldset">
+					<legend class="form__legend">Посещенные достопримечательности:</legend>
+					<label class="form__label">
+						<input class="form__input" type="checkbox" name="palase" checked>
+						<span class="form__checkbox-element"></span>
+						<span class="form__span">Мост Дьявола</span>
+					</label>
+					<label class="form__label">
+						<input class="form__input" type="checkbox" name="palase" checked>
+						<span class="form__checkbox-element"></span>
+						<span class="form__span">Гора-Колокол</span>
+					</label>
+					<label class="form__label">
+						<input class="form__input" type="checkbox" name="palase" checked>
+						<span class="form__checkbox-element"></span>
+						<span class="form__span">Слайд-парк</span>
+					</label>
+					<label class="form__label">
+						<input class="form__input" type="checkbox" name="palase">
+						<span class="form__checkbox-element"></span>
+						<span class="form__span">Красные скалы</span>
+					</label>
+				</fieldset>
+				<fieldset class="form__fieldset">
+					<legend class="form__legend">Опишите свои эмоции:</legend>
+					<textarea class="form__textarea" name="feedback" placeholder="Опишите подробно все свои восторги"></textarea>
+				</fieldset>
+				<button class="button form__button" type="submit">
+					Отправить отзыв
+        </button>
+      </form>
+    </main>
     <!--FOOTER-->
     <footer class="footer">
       <a class="hashtag footer__hashtag">#visitsedona</a>
