@@ -1,8 +1,28 @@
+.promo {
+  width: 275px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+
 .promo__title {
-  .font-big();
+  .font-middle();
+  margin: 0;
+  padding: 0;
+  text-align: center;
 }
 
 .promo__slogan {
   .font-little();
+  text-align: center;
   color: @gray--darken;
+}
+
+@media (min-width: @tablet-width) {
+  .promo {
+    width: 490px;
+  }
+
+  .promo__title--big-font {
+    .font-big();
+  }
 }

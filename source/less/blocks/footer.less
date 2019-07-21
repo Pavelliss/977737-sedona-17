@@ -1,0 +1,24 @@
+.footer {
+  .wraper-modile();
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer__develop {
+  display: block;
+  margin: 0 auto;
+}
+
+@media (min-width: @tablet-width) {
+  .footer {
+    .wraper-tablet();
+    flex-direction: row;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .footer {
+    .wraper-desctop();
+  }
+}

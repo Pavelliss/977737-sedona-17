@@ -5,11 +5,11 @@ html {
 *,
 *::before,
 *::after {
-  //-webkit-box-sizing: inherit;
   box-sizing: inherit;
 }
 
 body {
+  min-width: 320px;
   margin: 0;
 
   font-family: "PT Sans", "Arial", sans-serif;
@@ -30,7 +30,6 @@ input[type="checkbox"] {
 
   white-space: nowrap;
 
-  //-webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
