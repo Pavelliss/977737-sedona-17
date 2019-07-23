@@ -1,8 +1,50 @@
+.promo {
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+
 .promo__title {
-  .font-big();
+  .font-middle();
+  width: 255px;
+  margin: 0 auto;
+  margin-bottom: 35px;
+  padding: 0;
+
+  text-align: center;
 }
 
 .promo__slogan {
   .font-little();
+  width: 275px;
+  margin: 0 auto;
+  padding: 0;
+
+  text-align: center;
   color: @gray--darken;
+}
+
+@media (min-width: @tablet-width) {
+  .promo__title {
+    width: 490px;
+  }
+
+  .promo__slogan {
+    width: 490px;
+  }
+
+  .promo--tablet {
+    margin-bottom: 75px;
+  }
+
+  .promo__slogan--tablet {
+    width: 428px;
+  }
+
+  .promo__slogan--form {
+    width: 439px;
+  }
+
+  .promo__title--big-font {
+    .font-big();
+  }
 }
