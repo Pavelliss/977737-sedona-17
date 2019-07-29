@@ -1,13 +1,150 @@
 .offers-list {
   .list-reset();
   .secondary-color();
+  padding-top: 35px;
+  padding-bottom: 7px;
+  display: flex;
+  flex-direction: column;
+}
+
+.offers-list__item {
+  .wraper-modile();
+  position: relative;
+
+  margin-bottom: 30px;
+  padding: 0 20px;
+  padding-left: 70px;
+}
+
+.offers-list__icon {
+  &::after {
+    content: "";
+
+    position: absolute;
+    top: -8px;
+    left: 20px;
+
+    background-repeat: no-repeat;
+  }
+
+  &--house::after {
+    width: 39px;
+    height: 37px;
+    background-image: url("../../img/icon-house.svg");
+  }
+
+  &--box::after {
+    top: -10px;
+    left: 25px;
+
+    width: 32px;
+    height: 38px;
+    background-image: url("../../img/icon-gift.svg");
+  }
+
+  &--food::after {
+    width: 40px;
+    height: 35px;
+    background-image: url("../../img/icon-burger.svg");
+  }
 }
 
 .offers-list__title {
   .font-middle();
+  margin: 0;
+  padding: 0;
+  display: block;
+  margin-bottom: 10px;
 }
 
 .offers-list__text {
-  .font-little();
+  .font-little(22px);
+  margin: 0;
+  padding: 0;
   color: @gray--darken;
+}
+
+.offers-list__text br {
+  display: none;
+}
+
+@media (min-width: @tablet-width) {
+  .offers-list {
+    width: 100%;
+    padding-bottom: 28px;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .offers-list__item {
+    //width: 256px;
+    width: 33.33%;
+    padding-top: 125px;
+    padding-left: 20px;
+  }
+
+  .offers-list__item:nth-child(2) {
+    order: 1;
+  }
+
+  .offers-list__title {
+    .font-big();
+    margin-bottom: 20px;
+    display: block;
+    text-align: center;
+  }
+
+  .offers-list__text {
+    width: 156px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .offers-list__icon {
+    &::after {
+      top: 25px;
+      //left: 90px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    &--house::after {
+      width: 75px;
+      height: 72px;
+    }
+
+    &--box::after {
+      width: 64px;
+      height: 75px;
+    }
+
+    &--food::after {
+      width: 77px;
+      height: 68px;
+    }
+  }
+}
+
+@media (max-width: @modile-max-tablet) {
+  .offers-list__item:nth-child(2) .offers-list__text {
+    width: 170px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .offers-list {
+    padding-bottom: 53px;
+  }
+
+  .offers-list__item {
+    width: 400px;
+  }
+
+  .offers-list__text {
+    width: 283px;
+  }
+
+  .offers-list__text br {
+    display: inline;
+  }
 }
