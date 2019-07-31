@@ -23,7 +23,11 @@
           </button>
         </nav>
         <a class="logo header__logo" href="index.html">
-          <img src="img/logo-sedona-mobile.svg" width="102" height="83" alt="Logo city of Sedona">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="img/logo-sedona-desktop.svg">
+            <source media="(min-width: 768px)" srcset="img/logo-sedona-tablet.svg">
+            <img src="img/logo-sedona-mobile.svg" width="102" height="83" alt="Logo city of Sedona">
+          </picture>
         </a>
         <div class="header__image">
           <img class="header__brand-image" src="img/text-sedona-index.svg" width="282" height="214" alt="Welcom to Sedona">
@@ -42,7 +46,11 @@
               <h2 class="causes-list__title">Настоящий городок</h2>
               <p class="causes-list__text">Седона не аттракцион для туристов, там течет своя жизнь</p>
             </div>
-            <img src="img/main-city-mobile@1x.jpg" width="512" height="253" alt="Фото города">
+            <picture class="causes-list__picture">
+              <source media="(min-width: 1200px)" srcset="img/main-city-desktop@1x.jpg 1x, img/main-city-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/main-city-tablet@1x.jpg 1x, img/main-city-tablet@2x.jpg 2x">
+              <img src="img/main-city-mobile@1x.jpg" srcset="img/main-city-mobile@2x.jpg 2x" width="512" height="253" alt="Фото города">
+            </picture>
             <ul class="offers-list">
               <li class="offers-list__item offers-list__icon offers-list__icon--house">
                 <b class="offers-list__title">Жилье</b>
@@ -64,7 +72,11 @@
               <h2 class="causes-list__title">Там есть<br> мост дьявола</h2>
               <p class="causes-list__text">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
             </div>
-            <img src="img/main-bridge-mobile@1x.jpg" width="512" height="253" alt="Фото моста">
+            <picture class="causes-list__picture">
+              <source media="(min-width: 1200px)" srcset="img/photo-bridge-desktop@1x.jpg 1x, img/photo-bridge-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/photo-bridge-tablet@1x.jpg 1x, img/photo-bridge-tablet@2x.jpg 2x">
+              <img src="img/main-bridge-mobile@1x.jpg" srcset="img/photo-bridge-mobile@2x.jpg 2x" width="512" height="253" alt="Фото моста">
+            </picture>
           </li>
           <li class="causes-list__item causes-list__item--white-color">
             <div class="causes-list__wraper">
