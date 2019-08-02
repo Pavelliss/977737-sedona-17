@@ -50,6 +50,17 @@
   text-align: center;
 }
 
+.causes-list__picture {
+  width: 100%;
+  height: auto;
+}
+
+.causes-list__item img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
 .causes-list__item--white-color {
   .secondary-color();
   background-color: @gray--light;
@@ -103,6 +114,8 @@
     //width: 256px;
     width: 33%;
     margin: 0;
+    margin-top: auto;
+    margin-bottom: auto;
     padding: 0 39px;
   }
 
@@ -112,10 +125,9 @@
     min-height: 256px;
   }
 
-  .causes-list__item img {
-    //width: 512px;
+  .causes-list__picture {
     width: 67%;
-    height: 256px;
+    height: auto;
   }
 
   .causes-list__item:first-child {
@@ -181,9 +193,9 @@
     width: 400px;
   }
 
-  .causes-list__item img {
+  .causes-list__picture {
     width: 800px;
-    height: 253px;
+    height: 256px;
   }
 
   .causes-list__wraper {
