@@ -13,8 +13,9 @@ var imagemin = require("gulp-imagemin"); //оптимизация изображ
 var webp = require("gulp-webp");
 var svgstore = require("gulp-svgstore"); //sprite SVG
 var posthtml = require("gulp-posthtml");
-var include = require("posthtml-include");
+var include = require("posthtml-include"); //добавление тега в разметку
 var del = require("del");
+var jsmin = require("gulp-jsmin"); //min-js
 
 //less в css
 gulp.task("css", function () {
@@ -68,10 +69,18 @@ gulp.task("html", function () {
       include()
     ]))
     .pipe(gulp.dest("build"));
-})
+});
+
+//min-js
+gulp.task("jsmin", function () {
+  return gulp.src("source/js/*.js")
+    .pipe(jsmin())
+    .pipe(rename({suffix: ".min"}))
+    .pipe(gulp.dest("build/js"));
+});
 
 //копирование файлов из source
-gulp.task("copy", function() {
+gulp.task("copy", function () {
   return gulp.src([
     "source/fonts/**/*.{woff,woff2}",
     "source/img/**",
@@ -106,11 +115,13 @@ gulp.task("server", function () {
 
   gulp.watch("source/less/**/*.less", gulp.series("css"));
   gulp.watch("source/*.html", gulp.series("html", "refresh"));
+  gulp.watch("source/js/*.js", gulp.series("refresh"));
 });
 
 //сборка
 gulp.task("build", gulp.series(
   "clean",
+  "jsmin",
   "copy",
   "css",
   "sprite",
