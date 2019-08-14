@@ -46,20 +46,6 @@
   cursor: pointer;
 }
 
-.nav--closed .nav__button::before {
-  content: "";
-
-  position: absolute;
-  top: 0;
-  left: 0;
-
-  width: 23px;
-  height: 3px;
-
-  background-color: @color-main;
-  box-shadow: 0 8px 0 0 @color-main, 0 16px 0 0 @color-main;
-}
-
 .nav--open .nav__button {
   background-color: transparent;
 
@@ -82,6 +68,26 @@
 
   &::after {
     transform: rotate(-45deg);
+  }
+}
+
+.nav--closed .nav__button {
+  &::before {
+
+    top: 0;
+    left: 0;
+
+    width: 23px;
+    height: 3px;
+
+    background-color: @color-main;
+    box-shadow: 0 8px 0 0 @color-main, 0 16px 0 0 @color-main;
+
+    transform: rotate(0deg);
+  }
+
+  &::after {
+    background-color: transparent;
   }
 }
 
