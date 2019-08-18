@@ -7,15 +7,19 @@
     <link rel="preload" href="fonts/ptsans.woff2" as="font" crossorigin="anonymous">
     <link rel="preload" href="fonts/ptsansbold.woff2" as="font" crossorigin="anonymous">
     <link href="css/style.min.css" rel="stylesheet">
+    <script>
+      // Picture element HTML5 shiv
+      document.createElement( "picture" );
+    </script>
+    <script src="js/Picturefill.min.js"></script>
   </head>
   <body>
     <div style="display: none">
       <include src="build/img/sprite.svg"></include>
     </div>
     <div class="body-wraper">
-      <!--HEADER-->
       <header class="header">
-        <nav class="nav header__nav nav nav--open">
+        <nav class="nav header__nav nav nav--open nav--nojs">
           <ul class="nav__list">
             <li class="nav__item"><a class="nav__link" href="index.html">Главная</a></li>
             <li class="nav__item"><a class="nav__link nav__link--active">Фото и видео</a></li>
@@ -39,7 +43,7 @@
       </header>
       <!--MAIN-->
       <main class="main main--inner">
-        <section class="promo promo__inner promo--inner">
+        <section class="promo promo--inner">
           <h1 class="promo__title promo__title--big-font">Фото и видео</h1>
           <p class="promo__slogan promo__slogan--tablet">Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть о политике и экономике.</p>
         </section>
@@ -95,6 +99,9 @@
           <li class="gallery-list__item">
             <a class="gallery-list__image" href="#">
               <picture>
+                  <source type="image/webp" media="(min-width: 1200px)" srcset="img/photo-roads-desktop@1x.webp 1x, img/photo-roads-desktop@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/photo-roads-tablet@1x.webp 1x, img/photo-roads-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/photo-roads-mobile@1x.webp 1x, img/photo-roads-mobile@2x.webp 2x">
                   <source media="(min-width: 1200px)" srcset="img/photo-roads-desktop@1x.jpg 1x, img/photo-roads-desktop@2x.jpg 2x">
                   <source media="(min-width: 768px)" srcset="img/photo-roads-tablet@1x.jpg 1x, img/photo-roads-tablet@2x.jpg 2x">
                   <img src="img/photo-roads-mobile@1x.jpg" srcset="img/photo-roads-mobile@2x.jpg 2x" width="280" height="280" alt="Фото Дорога на север">
@@ -138,27 +145,37 @@
               </div>
           </li>
         </ul>
-        <section class="promo">
-          <h3 class="promo__title">Все еще сомневаетесь?</h3>
+        <section class="promo promo--video">
+          <h3 class="promo__title promo__title--big-font">Все еще сомневаетесь?</h3>
           <p class="promo__slogan promo__slogan--tablet">
             Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!
           </p>
           <div class="video">
-            <img class="video__image" src="#" alt="video file">
+            <picture>
+              <source type="image/webp" media="(min-width: 1200px)" srcset="img/video-desktop@1x.webp 1x, img/video-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/video-tablet@1x.webp 1x, img/video-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/video-mobile@1x.webp 1x, img/video-mobile@2x.webp 2x">
+              <source media="(min-width: 1200px)" srcset="img/video-desktop@1x.jpg 1x, img/video-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/video-tablet@1x.jpg 1x, img/video-tablet@2x.jpg 2x">
+              <img src="img/video-mobile@1x.jpg" srcset="img/video-mobile@2x.jpg 2x" width="280" height="280" alt="Мост дьявола">
+            </picture>
             <div class="video__player">
-              <div class="video__wraper">
-                <div class="video__range"></div>
-                <div class="viseo__marker"></div>
+              <div class="video__range-wraper">
+                <div class="video__marker">
+                    <div class="video__range"></div>
+                </div>
               </div>
-              <button class="video__button video__button--replay" type="button">
-                <span class="visually-hidden">Воспроизвести снова</span>
-              </button>
-              <button class="video__button video__button--сс" type="button">
-                <span class="visually-hidden">Включить субтитры</span>
-              </button>
-              <button class="video__button video__button--full-screen" type="button">
-                <span class="visually-hidden">Развернуть на весь экран</span>
-              </button>
+              <div class="video__button-wraper">
+                <button class="video__button video__button--replay" type="button">
+                  <span class="visually-hidden">Воспроизвести снова</span>
+                </button>
+                <button class="video__button video__button--cc" type="button">
+                  <span class="visually-hidden">Включить субтитры</span>
+                </button>
+                <button class="video__button video__button--full-screen" type="button">
+                  <span class="visually-hidden">Развернуть на весь экран</span>
+                </button>
+              </div>
             </div>
           </div>
         </section>
