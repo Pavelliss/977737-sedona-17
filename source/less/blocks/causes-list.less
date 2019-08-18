@@ -1,6 +1,7 @@
 .causes-list {
   .list-reset();
   .colors-main();
+  margin-bottom: 30px;
   display: flex;
   flex-direction: column;
 }
@@ -45,9 +46,13 @@
   .font-little(20px);
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 45px;
+  margin-bottom: 40px;
 
   text-align: center;
+
+  & br {
+    display: none;
+  }
 }
 
 .causes-list__picture {
@@ -76,9 +81,10 @@
   }
 
   .causes-list__item:first-child {
-    background-image: url("../img/white_copy_2.svg");
+    background-image: url("../img/bg-triangle.svg");
     background-repeat: no-repeat;
     background-position: top 0 left 50%;
+    background-size: contain;
   }
 
   .causes-list__item--white-color {
@@ -99,24 +105,29 @@
   }
 }
 
+@media (min-width: 560px) {
+  .causes-list__item:first-child {
+    background-image: none;
+  }
+}
+
 @media (min-width: @tablet-width) {
   .causes-list {
+    margin-bottom: 54px;
     flex-direction: row;
     flex-wrap: wrap;
   }
 
   .main__list {
-    //.wraper-tablet();
     width: 100%;
   }
 
   .causes-list__wraper {
-    //width: 256px;
     width: 33%;
     margin: 0;
     margin-top: auto;
     margin-bottom: auto;
-    padding: 0 39px;
+    padding: 0 42px;
   }
 
   .causes-list__item {
@@ -136,7 +147,6 @@
   }
 
   .causes-list__item:nth-child(2) {
-    //width: 768px;
     width: 100%;
   }
 
@@ -147,7 +157,8 @@
   .causes-list__title {
     .font-big();
     margin: 0 auto;
-    margin-top: 45px;
+    margin-top: 40px;
+    margin-bottom: 4px;
     width: 160px;
   }
 
@@ -161,8 +172,11 @@
   }
 
   .causes-list__item--white-color {
-    //width: 256px;
     width: 33.33%;
+
+    & .causes-list__title {
+      margin-top: 22px;
+    }
   }
 
   .causes-list__item--white-color .causes-list__wraper {
@@ -170,20 +184,18 @@
   }
 
   .causes-list__item--white-color .causes-list__text {
-    //width: 157px;
     width: 100%;
   }
 
   .causes-list__item:nth-child(4) .causes-list__text {
     width: 145px;
-    //width: 56%;
   }
 }
 
 @media (min-width: @desktop-width) {
-  .main__list {
-    .wraper-desktop();
-  }
+  // .main__list {
+  //   .wraper-desktop();
+  // }
 
   .causes-list__item:nth-child(2) {
     width: 1200px;
@@ -204,9 +216,14 @@
   }
 
   .causes-list__title {
-    margin-top: 53px;
+    margin-top: 35px;
+    margin-bottom: 5px;
     margin-left: auto;
     margin-right: auto;
+  }
+
+  .causes-list__text br {
+    display: inline;
   }
 
   .causes-list__item--white-color {
@@ -214,7 +231,7 @@
   }
 
   .causes-list__item--white-color .causes-list__title {
-    margin-top: 45px;
+    margin-top: 5px;
   }
 
   .causes-list__item--white-color .causes-list__text {

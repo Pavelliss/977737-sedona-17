@@ -1,0 +1,27 @@
+.button {
+  .font-big();
+  display: block;
+  box-sizing: border-box;
+
+  color: #ffffff;
+  text-transform: inherit;
+  font-family: inherit;
+  text-align: center;
+
+  background-color: @color-main;
+  border: none;
+
+  &:hover,
+  &:focus {
+    background-color: @btn-color--hover;
+  }
+
+  &:active {
+    background-color: @btn-color--active;
+    color: rgba(255, 255, 255, 0.3);
+  }
+
+  &--disabled {
+    background-color: @gray--light;
+  }
+}

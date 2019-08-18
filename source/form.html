@@ -7,15 +7,19 @@
     <link rel="preload" href="fonts/ptsans.woff2" as="font" crossorigin="anonymous">
     <link rel="preload" href="fonts/ptsansbold.woff2" as="font" crossorigin="anonymous">
     <link href="css/style.min.css" rel="stylesheet">
+    <script>
+      // Picture element HTML5 shiv
+      document.createElement( "picture" );
+    </script>
+    <script src="js/Picturefill.min.js"></script>
   </head>
   <body>
     <div style="display: none">
       <include src="build/img/sprite.svg"></include>
     </div>
     <div class="body-wraper">
-      <!--HEADER-->
       <header class="header">
-        <nav class="nav header__nav nav--open">
+        <nav class="nav header__nav nav--open nav--nojs">
           <ul class="nav__list">
             <li class="nav__item"><a class="nav__link" href="index.html">Главная</a></li>
             <li class="nav__item"><a class="nav__link" href="photo.html">Фото и видео</a></li>
@@ -38,80 +42,104 @@
         </div>
       </header>
       <main class="main main--form">
-        <section class="promo promo__inner">
+        <section class="promo promo--inner">
             <h1 class="promo__title promo__title--big-font">Оставьте свой отзыв</h1>
             <p class="promo__slogan promo__slogan--form">Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
         </section>
         <form class="form" action="https://echo.htmlacademy.ru" method="post">
-          <fieldset class="form__fieldset">
-            <legend class="form__legend">Представьтесь</legend>
+          <div class="form__wraper">
+            <fieldset class="form__fieldset">
+              <legend class="form__legend">Представьтесь:</legend>
               <label class="form__label">
-                Имя*:<input class="form__input-text" type="text" name="first-name" placeholder="Петр">
+                <span class="form__span">Имя*:</span>
+                <input class="form__input form__input--text form__placeholder" type="text" name="first-name" placeholder="Петр">
               </label>
               <label class="form__label">
-                Фамилия*:<input class="form__input-text" type="text" name="last-name" placeholder="Иванов">
+                <span class="form__span">Фамилия*:</span>
+                <input class="form__input form__input--text form__placeholder" type="text" name="last-name" placeholder="Иванов">
               </label>
               <label class="form__label">
-                Отчество:<input class="form__input-text" type="text" name="middle-name" placeholder="Александрович">
+                <span class="form__span">Отчество:</span>
+                <input class="form__input form__input--text form__placeholder" type="text" name="middle-name" placeholder="Александрович">
               </label>
-          </fieldset>
-          <fieldset class="form__fieldset">
-            <legend class="form__legend">Контактная информация</legend>
-            <label class="form__label">
-              Контактный телефон*:<input class="form__input-tel form__icon form__icon--tel" type="tel" name="user-tel" placeholder="Введите телефон">
-            </label>
-            <label class="form__label">
-              Электронная почта*:<input class="form__input-email form__icon form__icon--email" type="email" name="user-email" placeholder="Введите e-mail">
-            </label>
-          </fieldset>
-          <fieldset class="form__fieldset">
-            <legend class="form__legend">Ваше общее впечатление</legend>
-            <label class="form__label">
-              <input class="form__input-radio" type="radio" name="impressions" value="good" checked="">
-              <span class="form__radio-element"></span>
-              <span class="form__span">Скорее положительное</span>
-            </label>
-            <label class="form__label">
-              <input class="form__input-radio" type="radio" name="impressions" value="bad">
-              <span class="form__radio-element"></span>
-              <span class="form__span">Скорее отрицательное</span>
-            </label>
-            <label class="form__label">
-              <input class="form__input-radio" type="radio" name="impressions" value="nothing">
-              <span class="form__radio-element"></span>
-              <span class="form__span">Затрудняюсь ответить</span>
-            </label>
-          </fieldset>
-          <fieldset class="form__fieldset">
-            <legend class="form__legend">Посещенные достопримечательности:</legend>
-            <label class="form__label">
-              <input class="form__input-checkbox" type="checkbox" name="palase" checked="">
-              <span class="form__checkbox-element"></span>
-              <span class="form__span">Мост Дьявола</span>
-            </label>
-            <label class="form__label">
-              <input class="form__input-checkbox" type="checkbox" name="palase" checked="">
-              <span class="form__checkbox-element"></span>
-              <span class="form__span">Гора-Колокол</span>
-            </label>
-            <label class="form__label">
-              <input class="form__input-checkbox" type="checkbox" name="palase" checked="">
-              <span class="form__checkbox-element"></span>
-              <span class="form__span">Слайд-парк</span>
-            </label>
-            <label class="form__label">
-              <input class="form__input-checkbox" type="checkbox" name="palase">
-              <span class="form__checkbox-element"></span>
-              <span class="form__span">Красные скалы</span>
-            </label>
-          </fieldset>
-          <fieldset class="form__fieldset">
-            <legend class="form__legend">Опишите свои эмоции:</legend>
-            <textarea class="form__textarea" name="feedback" placeholder="Опишите подробно все свои восторги"></textarea>
-          </fieldset>
-          <button class="button form__button" type="submit">
-            Отправить отзыв
-          </button>
+            </fieldset>
+          </div>
+          <div class="form__wraper">
+            <fieldset class="form__fieldset form__fieldset--info">
+              <legend class="form__legend">Контактная информация:</legend>
+              <div class="form__wraper--info">
+                <label class="form__label form__label--info form__icon form__icon--tel">
+                  <span class="form__span form__span--info">
+                    <span class="form__span--hidden">Контактный </span>телефон*:
+                  </span>
+                  <input class="form__input form__input--info form__placeholder" type="tel" name="user-tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="Введите телефон">
+                </label>
+                <label class="form__label form__label--info form__icon form__icon--email ">
+                  <span class="form__span form__span--info">Электронная почта*:</span>
+                  <input class="form__input form__input--info form__placeholder" type="email" name="user-email" placeholder="Введите e-mail">
+                </label>
+              </div>
+            </fieldset>
+          </div>
+          <div class="form__wraper">
+            <fieldset class="form__fieldset">
+              <legend class="form__legend form__legend--radio">Ваше общее впечатление:</legend>
+              <label class="form__label form__label--radio">
+                <input class="form__input-radio" type="radio" name="impressions" value="good" checked>
+                <span class="form__element-radio"></span>
+                <span class="form__span form__span--radio">Скорее положительное</span>
+              </label>
+              <label class="form__label form__label--radio">
+                <input class="form__input-radio" type="radio" name="impressions" value="bad">
+                <span class="form__element-radio"></span>
+                <span class="form__span form__span--radio">Скорее отрицательное</span>
+              </label>
+              <label class="form__label form__label--radio">
+                <input class="form__input-radio" type="radio" name="impressions" value="nothing">
+                <span class="form__element-radio"></span>
+                <span class="form__span form__span--radio">Затрудняюсь ответить</span>
+              </label>
+            </fieldset>
+          </div>
+          <div class="form__wraper">
+            <fieldset class="form__fieldset">
+              <legend class="form__legend form__legend--checkbox">Посещенные достопримечательности:</legend>
+              <div class="form__wraper--checkbox">
+                <label class="form__label form__label--checkbox">
+                  <input class="form__input-checkbox" type="checkbox" name="palase" checked>
+                  <span class="form__element-checkbox"></span>
+                  <span class="form__span form__span--checkbox">Мост Дьявола</span>
+                </label>
+                <label class="form__label form__label--checkbox">
+                  <input class="form__input-checkbox" type="checkbox" name="palase" checked>
+                  <span class="form__element-checkbox"></span>
+                  <span class="form__span form__span--checkbox">Гора-Колокол</span>
+                </label>
+                <label class="form__label form__label--checkbox">
+                  <input class="form__input-checkbox" type="checkbox" name="palase" checked>
+                  <span class="form__element-checkbox"></span>
+                  <span class="form__span form__span--checkbox">Слайд-парк</span>
+                </label>
+                <label class="form__label form__label--checkbox">
+                  <input class="form__input-checkbox" type="checkbox" name="palase">
+                  <span class="form__element-checkbox"></span>
+                  <span class="form__span form__span--checkbox">Красные скалы</span>
+                </label>
+              </div>
+            </fieldset>
+          </div>
+          <div class="form__wraper form__wraper--textarea">
+            <fieldset class="form__fieldset">
+              <legend class="form__legend form__legend--textarea">Опишите свои эмоции:</legend>
+              <textarea class="form__textarea form__placeholder" name="feedback" placeholder="Опишите подробно все свои восторги"></textarea>
+            </fieldset>
+          </div>
+          <div class="form__wraper--button">
+            <button class="button form__button" type="submit">
+              Отправить отзыв
+            </button>
+            <span class="form__legend-span">* — обязательные поля</span>
+          </div>
         </form>
       </main>
       <!--FOOTER-->
@@ -142,19 +170,20 @@
         </a>
       </footer>
       <!--POPUPS-->
-      <div class="popup popus__invalid">
-        <b class="popup__title">Что-то пошло не так!</b>
+      <div class="popup popup--invalid">
+        <b class="popup__title popup__title--invalid">Что-то пошло не так!</b>
         <p class="popup__text">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
         <button class="button button__popup-close" type="button">Ок</button>
       </div>
-      <div class="popup popus__valid">
+      <div class="popup popup--valid">
         <b class="popup__title">Ваш отзыв отправлен!</b>
-        <p class="popup__text">Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы опубликуем его на сайте.</p>
+        <p class="popup__text popup__text--valid">Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы опубликуем его на сайте.</p>
         <div class="popup__wraper">
-          <button class="button button__popup-close" type="button">Закрыть окно</button>
+          <button class="button button__popup-close button__popup-close--valid" type="button">Закрыть окно</button>
         </div>
       </div>
     </div>
     <script src="js/app.min.js"></script>
   </body>
 </html>
+<!--18.08.19-->

@@ -65,7 +65,6 @@
 
 @media (min-width: @tablet-width) {
   .header {
-    //width: @tablet-width;
     margin: 0 auto;
     margin-bottom: 50px;
   }
@@ -77,6 +76,7 @@
   .header__image {
     height: 518px;
     background-image: url("../img/bg-intro-triangle-tablet.svg"), url("../img/bg-back-tablet@1x.jpg");
+    background-position: 50% bottom, 50% bottom;
   }
 
   .header__image--min {
@@ -85,11 +85,16 @@
   }
 
   .header__brand-image {
+    position: relative;
+    top: -12px;
+
     width: 460px;
     height: 350px;
   }
 
   .header__brand-image--inner {
+    top: 0;
+
     width: 461px;
     height: 80px;
   }
@@ -117,6 +122,10 @@
 
   .header__image {
     background-image: url("../img/bg-intro-triangle-desktop.svg"), url("../img/bg-back-desktop@1x.jpg");
+  }
+
+  .header__brand-image--inner {
+    padding-top: 55px;
   }
 
   @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
