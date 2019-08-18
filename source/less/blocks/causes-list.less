@@ -1,7 +1,7 @@
 .causes-list {
   .list-reset();
   .colors-main();
-  margin-bottom: 30px;
+  margin-bottom: 26px;
   display: flex;
   flex-direction: column;
 }
@@ -46,7 +46,7 @@
   .font-little(20px);
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 40px;
+  margin-bottom: 42px;
 
   text-align: center;
 
@@ -175,7 +175,7 @@
     width: 33.33%;
 
     & .causes-list__title {
-      margin-top: 22px;
+      margin-top: 32px;
     }
   }
 
@@ -185,6 +185,11 @@
 
   .causes-list__item--white-color .causes-list__text {
     width: 100%;
+    color: @gray--darken;
+  }
+
+  .causes-list__item--white-color .causes-list__number {
+    color: @gray--darken;
   }
 
   .causes-list__item:nth-child(4) .causes-list__text {
@@ -193,10 +198,6 @@
 }
 
 @media (min-width: @desktop-width) {
-  // .main__list {
-  //   .wraper-desktop();
-  // }
-
   .causes-list__item:nth-child(2) {
     width: 1200px;
   }
@@ -231,7 +232,7 @@
   }
 
   .causes-list__item--white-color .causes-list__title {
-    margin-top: 5px;
+    margin-top: 9px;
   }
 
   .causes-list__item--white-color .causes-list__text {

@@ -106,8 +106,8 @@
     width: 84%;
     max-width: 800px;
     margin: 0 auto;
-    margin-top: 75px;
-    margin-bottom: 79px;
+    margin-top: 70px;
+    margin-bottom: 75px;
   }
 
   .video img {
@@ -184,7 +184,22 @@
 @media (min-width: @desktop-width) {
   .video {
     width: 800px;
-    margin-bottom: 120px;
+    margin-top: 68px;
+    margin-bottom: 0;
     padding: 0;
+  }
+
+  .video__button {
+    &--replay {
+      margin-left: 35px;
+    }
+
+    &--cc {
+      margin-left: 619px;
+    }
+
+    &--full-screen {
+      margin-left: 27px;
+    }
   }
 }
